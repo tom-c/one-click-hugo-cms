@@ -36,6 +36,9 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Products", name: products, widget: list, fields: [
               {label: "Image", name: "image", widget: "image"},
               {label: "Text", name: "text", widget: "text"}]}
+          - {label: "Menus", name: menus, widget: list, fields: [
+              {label: "Name", name: "name", widget: "string"},
+              { label: 'Menu', name: 'menu', widget: 'file', media_library: { config: { multiple: false } } }]}
           - { label: 'File', name: 'file', widget: 'file', media_library: { config: { multiple: true } } }
           - {label: "Values", name: "values", widget: "object", fields: [
               {label: "Heading", name: "heading", widget: string},
