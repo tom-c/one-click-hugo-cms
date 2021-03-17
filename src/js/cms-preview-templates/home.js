@@ -41,6 +41,26 @@ export default class PostPreview extends React.Component {
           </div>
         </div>
 
+        <div className="bg-off-white pv4">
+          <div className="ph3 mw7 center">
+            <h2 className="f2 b lh-title mb2">MENUS</h2>
+            <p className="mb4 mw6">Some intro text</p>
+
+            <div className="flex-ns mhn2-ns mb3">
+              {(entry.getIn(["data", "menus"]) || []).map((item, i) => <div className="ph2-ns w-50-ns" key={i}>
+                <a href={"/" + item.get("menu")}>{item.get("name")}</a>
+              </div>)}
+            </div>
+
+            <div className="tc">
+              <a href="#" className="btn raise">See all products</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
         <div className="bg-grey-1 pv4">
           <div className="ph3 mw7 center">
 
