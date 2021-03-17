@@ -1,5 +1,7 @@
 backend:
   name: git-gateway
+  repo: tom-c/one-click-hugo-cms
+  branch: master
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
@@ -34,6 +36,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Products", name: products, widget: list, fields: [
               {label: "Image", name: "image", widget: "image"},
               {label: "Text", name: "text", widget: "text"}]}
+          - { label: 'File', name: 'file', widget: 'file', media_library: { config: { multiple: true } } }
           - {label: "Values", name: "values", widget: "object", fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
